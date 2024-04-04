@@ -1,5 +1,6 @@
 # Leet Code
 # https://leetcode.com/problems/palindrome-number/description/
+# solution without converting to string
 
 
 class Solution:
