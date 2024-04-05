@@ -2,7 +2,7 @@
 
 # https://leetcode.com/problems/non-decreasing-array/
 class Solution:
-    def checkPossibility(self, nums: List[int]) -> bool:
+    def checkPossibility(self, nums):
 
         can_modify = 1
         for i in range(len(nums)-1):
