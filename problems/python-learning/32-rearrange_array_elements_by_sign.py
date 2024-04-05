@@ -1,17 +1,17 @@
 # https://leetcode.com/problems/rearrange-array-elements-by-sign/
-
 class Solution:
     def rearrangeArray(self, nums):
-        pos = []
-        neg = []
+        pos = 0
+        neg = 1
 
-        res = []
+        res = [0]*len(nums)
+
         for n in nums:
             if n >= 0:
-                pos.append(n)
+                res[pos] = n
+                pos += 2
             else:
-                neg.append(n)
-        for i in range(len(pos)):
-            res.append(pos[i])
-            res.append(neg[i])
+                res[neg] = n
+                neg += 2
+
         return res
