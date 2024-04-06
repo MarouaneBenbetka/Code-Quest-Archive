@@ -22,12 +22,34 @@
 # ================================================================================================================================================================
 
 
-n, m = map(int, input().split())
+# n, m = map(int, input().split())
 
-d = {}
-for _ in range(n):
-    name, ip = input().split()
-    d[ip] = name
-for _ in range(m):
-    command, ip = input().split()
-    print(command, ip, "#"+d[ip[:-1]])
+# d = {}
+# for _ in range(n):
+#     name, ip = input().split()
+#     d[ip] = name
+# for _ in range(m):
+#     command, ip = input().split()
+#     print(command, ip, "#"+d[ip[:-1]])
+
+
+# ================================================================================================================================================================
+
+
+for _ in range(int(input())):
+    n = int(input())
+    list = sorted(((int(x)-i, i)
+                   for i, x in enumerate(input().split())), reverse=True)
+
+    b_list = []
+    for i in range(0, n-3):
+        res = 0
+        l = 0
+        r = n
+        for b, i in list[i:i+3]:
+            res += b+i
+            r = min(r, i)
+            l = max(l, i)
+        b_list.append(res - l + r)
+
+    print(max(b_list))
