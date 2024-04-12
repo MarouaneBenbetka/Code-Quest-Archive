@@ -1,4 +1,5 @@
 # https://leetcode.com/problems/max-consecutive-ones-iii/
+
 arr = list(map(int, input().split()))
 n = len(arr)
 
