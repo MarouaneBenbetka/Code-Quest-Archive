@@ -1,18 +1,19 @@
 n = int(input())
-maxx = 100001
-log = [0]*maxx
+log = []
 
 for i in range(n):
     s, t, b = map(int, input().split())
-    log[s] += b
-    log[t + 1] -= b
+    log.append((s, b))
+    log.append((t+1, -b))
+
+log.sort()
+
 
 ans = 0
-cur = 0
+curr = 0
 
-for i in range(maxx):
-    cur += log[i]
-    if cur > ans:
-        ans = cur
+for _, rooms in log:
+    curr += rooms
+    ans = max(ans, curr)
 
 print(ans)
