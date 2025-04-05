@@ -1,54 +1,78 @@
-# React + TypeScript + Vite
+# 📬 Contact Form App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and elegant contact form built with **React**, styled using **CSS Modules**, and validated using **React Hook Form** with **Zod** schemas.
 
-Currently, two official plugins are available:
+## 🧰 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   ⚛️ React + TypeScript
+-   🎣 React Hook Form
+-   📦 Zod (for schema validation)
+-   💅 CSS Modules
+-   ⚡ Vite (for fast builds)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🚀 Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+-   Real-time form validation
+-   Schema-based validation with Zod
+-   Styled components using CSS Modules
+-   Success confirmation popup
+-   Clear and accessible error messages
+
+---
+
+## 🗂️ Folder Structure
+
+```bash
+src/
+├── components/
+│   └── contact-form.tsx        # Main contact form component
+├── schemas/
+│   └── contact-form.schema.ts  # Zod schema for form validation
+├── styles/
+│   └── contact-form.module.css # Styles for the form
+├── App.tsx
+├── main.tsx
+└── vite-env.d.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 📸 Screenshots
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### 🖼️ General UI
+
+![General UI](./github/screenshots/general-ui.png)
+
+---
+
+### ❌ Validation Errors
+
+![Validation Errors](./github/screenshots/errors.png)
+
+---
+
+### ✅ Success Popup
+
+![Success Popup](./github/screenshots/success-popup.png)
+
+---
+
+## 🧪 Running the App Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/MarouaneBenbetka/Code-Quest-Archive.git
+cd web/React/react-hook-form-practice
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+
+---
