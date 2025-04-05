@@ -1,0 +1,89 @@
+.todoForm {
+	display: flex;
+	margin-bottom: 2rem;
+	gap: 1rem;
+	position: relative;
+}
+
+.todoInput {
+	flex: 1;
+	padding: 1rem 1.25rem;
+	border: 2px solid #e2e8f0;
+	border-radius: 12px;
+	font-size: 1rem;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+	transition: all 0.3s;
+}
+
+.todoInput:focus {
+	outline: none;
+	border-color: #4299e1;
+	box-shadow: 0 0 0 4px rgba(66, 153, 225, 0.25);
+}
+
+:global(.darkMode) .todoInput {
+	background-color: #2d3748;
+	border-color: #4a5568;
+	color: #e2e8f0;
+}
+
+:global(.darkMode) .todoInput::placeholder {
+	color: #a0aec0;
+}
+
+:global(.darkMode) .todoInput:focus {
+	border-color: #63b3ed;
+	box-shadow: 0 0 0 4px rgba(99, 179, 237, 0.25);
+}
+
+.addButton {
+	background: linear-gradient(90deg, #3182ce 0%, #4299e1 100%);
+	color: white;
+	border: none;
+	border-radius: 12px;
+	padding: 0 1.25rem;
+	font-weight: 600;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.3s;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	white-space: nowrap;
+}
+
+.addButton:hover:not(:disabled) {
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(66, 153, 225, 0.4);
+}
+
+.addButton:active:not(:disabled) {
+	transform: translateY(0);
+}
+
+.addButton:disabled {
+	background: #cbd5e0;
+	cursor: not-allowed;
+}
+
+:global(.darkMode) .addButton:disabled {
+	background: #4a5568;
+}
+
+.buttonIcon {
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+
+@media (max-width: 480px) {
+	.buttonText {
+		display: none;
+	}
+
+	.addButton {
+		padding: 0;
+		width: 48px;
+		height: 48px;
+		justify-content: center;
+	}
+}

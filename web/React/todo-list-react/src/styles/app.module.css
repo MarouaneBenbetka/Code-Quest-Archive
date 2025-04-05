@@ -1,0 +1,228 @@
+.appContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+	padding: 2rem;
+	font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+	transition: background 0.3s ease;
+}
+
+.appContainer.darkMode {
+	background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+	color: #e5e7eb;
+}
+
+.todoApp {
+	width: 100%;
+	max-width: 600px;
+	background-color: white;
+	border-radius: 16px;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+	padding: 2.5rem;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
+}
+
+.darkMode .todoApp {
+	background-color: #2d3748;
+	box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.headerContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
+}
+
+.header {
+	color: #2b6cb0;
+	margin: 0;
+	font-weight: 800;
+	font-size: 2.5rem;
+	letter-spacing: -0.025em;
+	background: linear-gradient(90deg, #2b6cb0 0%, #4299e1 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.darkMode .header {
+	background: linear-gradient(90deg, #63b3ed 0%, #90cdf4 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.themeToggle {
+	background: none;
+	border: none;
+	font-size: 1.5rem;
+	cursor: pointer;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.2s;
+	background-color: #f7fafc;
+}
+
+.darkMode .themeToggle {
+	background-color: #4a5568;
+}
+
+.themeToggle:hover {
+	transform: rotate(15deg);
+	background-color: #edf2f7;
+}
+
+.darkMode .themeToggle:hover {
+	background-color: #2d3748;
+}
+
+.progressContainer {
+	margin-bottom: 1.5rem;
+}
+
+.progressBar {
+	height: 8px;
+	background-color: #e2e8f0;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-bottom: 0.5rem;
+}
+
+.darkMode .progressBar {
+	background-color: #4a5568;
+}
+
+.progressFill {
+	height: 100%;
+	background: linear-gradient(90deg, #3182ce 0%, #4299e1 100%);
+	border-radius: 4px;
+	transition: width 0.5s ease;
+}
+
+.progressText {
+	text-align: right;
+	font-size: 0.875rem;
+	color: #718096;
+}
+
+.darkMode .progressText {
+	color: #a0aec0;
+}
+
+.todoStats {
+	margin-top: 2rem;
+	padding-top: 1.5rem;
+	border-top: 1px solid #e2e8f0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.darkMode .todoStats {
+	border-top: 1px solid #4a5568;
+}
+
+.statsCounters {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.statItem {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.25rem;
+}
+
+.statItem span:last-child {
+	font-size: 0.75rem;
+	color: #718096;
+}
+
+.darkMode .statItem span:last-child {
+	color: #a0aec0;
+}
+
+.statBadge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: #e2e8f0;
+	color: #4a5568;
+	font-weight: 600;
+	font-size: 0.875rem;
+}
+
+.darkMode .statBadge {
+	background-color: #4a5568;
+	color: #e2e8f0;
+}
+
+.pendingBadge {
+	background-color: #fed7d7;
+	color: #e53e3e;
+}
+
+.darkMode .pendingBadge {
+	background-color: rgba(229, 62, 62, 0.2);
+	color: #fc8181;
+}
+
+.completedBadge {
+	background-color: #c6f6d5;
+	color: #38a169;
+}
+
+.darkMode .completedBadge {
+	background-color: rgba(56, 161, 105, 0.2);
+	color: #68d391;
+}
+
+.clearButton {
+	border: none;
+	background: none;
+	color: #e53e3e;
+	font-size: 0.875rem;
+	cursor: pointer;
+	padding: 0.5rem 0.75rem;
+	border-radius: 0.375rem;
+	transition: all 0.2s;
+}
+
+.clearButton:hover {
+	background-color: #fed7d7;
+}
+
+.darkMode .clearButton {
+	color: #fc8181;
+}
+
+.darkMode .clearButton:hover {
+	background-color: rgba(229, 62, 62, 0.2);
+}
+
+.footer {
+	margin-top: 2rem;
+	color: #718096;
+	font-size: 0.875rem;
+}
+
+.darkMode .footer {
+	color: #a0aec0;
+}
