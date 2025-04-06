@@ -8,17 +8,12 @@ export async function generateStaticParams() {
 	}));
 }
 
-interface JobPageProps {
-	params: {
-		id: string;
-	};
-}
+type Params = Promise<{ id: string }>;
 
-export default function JobPage({ params }: JobPageProps) {
-	// Simulate a network request
-	const job = jobData.job_postings.find((job) => job.id === params.id);
+export default async function JobPage({ params }: { params: Params }) {
+	const jobId = (await params).id;
+	const job = jobData.job_postings.find((job) => job.id === jobId);
 
-	// If job not found, show 404 page
 	if (!job) {
 		notFound();
 	}
