@@ -1,5 +1,7 @@
 # 💼 Job Listing App
 
+🔗 **Live Demo:** [https://job-listing-app-dummy-data-azp6.vercel.app/](https://job-listing-app-dummy-data-azp6.vercel.app/)
+
 A sleek, modern **Next.js** web application for showcasing job opportunities.  
 It uses **dummy data**, modern styling with **Tailwind CSS** and **shadcn/ui**, and follows best practices for scalable and clean code architecture.
 
@@ -35,7 +37,7 @@ All job-related content is stored statically in: `src/data/jobs.ts`
 
 Displays all available jobs using cards or lists.
 
-![Job Listings](./public/images/jobs-listing.png)
+![Job Listings](./github/screenshots/general-ui.png)
 
 ---
 
@@ -43,7 +45,7 @@ Displays all available jobs using cards or lists.
 
 Displays detailed information about a single job.
 
-![Job Details](./public/images/job-details.png)
+![Job Details](./github/screenshots/job-details.png)
 
 ---
 
@@ -51,6 +53,6 @@ Displays detailed information about a single job.
 
 Displays a user-friendly message when the job ID is invalid or doesn't exist.
 
-![Job Not Found](./public/images/job-not-found.png)
+![Job Not Found](./github/screenshots/job-not-found.png)
 
 ---
