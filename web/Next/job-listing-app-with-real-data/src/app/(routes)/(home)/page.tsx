@@ -1,10 +1,17 @@
 import JobListings from "@/components/main/job-listings";
 import { jobData } from "@/data/jobs";
+import { useServerData } from "@/hooks/use-server-data";
+import { getOpportunitiesQueryOptions } from "@/services/opportunities/utils";
+import PageClient from "./page-client";
 
-export default function Home() {
+export default async function Home() {
+	const { ServerData } = await useServerData([
+		getOpportunitiesQueryOptions({}),
+	]);
+
 	return (
-		<main className="container mx-auto py-8 px-4 max-w-[900px]">
-			<JobListings jobs={jobData.job_postings} />
-		</main>
+		<ServerData>
+			<PageClient />
+		</ServerData>
 	);
 }

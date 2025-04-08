@@ -1,6 +1,5 @@
-import { Skeleton } from "@/components/ui/skeleton";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Loader2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Loading() {
@@ -17,7 +16,15 @@ export default function Loading() {
 				</Link>
 			</Button>
 
-			<Skeleton className="h-[calc(100vh-200px)] w-full rounded-lg" />
+			<div className="flex flex-col items-center justify-center h-[calc(100vh-200px)] w-full rounded-lg bg-slate-50 border border-slate-200">
+				<Loader2 className="h-12 w-12 text-blue-500 animate-spin mb-4" />
+				<h3 className="text-lg font-medium text-slate-700">
+					Loading job details...
+				</h3>
+				<p className="text-slate-500 mt-2">
+					Please wait while we fetch the information
+				</p>
+			</div>
 		</div>
 	);
 }

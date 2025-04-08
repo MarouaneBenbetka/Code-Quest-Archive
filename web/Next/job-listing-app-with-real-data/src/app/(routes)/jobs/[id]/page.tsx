@@ -1,6 +1,9 @@
 import { JobDetails } from "@/components/main/job-details";
 import { jobData } from "@/data/jobs";
+import { useServerData } from "@/hooks/use-server-data";
+import { getOpportynityByIdQueryOptions } from "@/services/opportunities/utils";
 import { notFound } from "next/navigation";
+import PageClient from "./page-client";
 
 export async function generateStaticParams() {
 	return jobData.job_postings.map((job) => ({
@@ -12,15 +15,14 @@ type Params = Promise<{ id: string }>;
 
 export default async function JobPage({ params }: { params: Params }) {
 	const jobId = (await params).id;
-	const job = jobData.job_postings.find((job) => job.id === jobId);
 
-	if (!job) {
-		notFound();
-	}
+	const { ServerData } = await useServerData([
+		getOpportynityByIdQueryOptions(jobId),
+	]);
 
 	return (
-		<main className="container mx-auto py-3 px-4">
-			<JobDetails job={job} />
-		</main>
+		<ServerData>
+			<PageClient jobId={jobId} />
+		</ServerData>
 	);
 }
