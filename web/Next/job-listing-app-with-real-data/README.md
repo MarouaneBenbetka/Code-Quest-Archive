@@ -1,6 +1,6 @@
 # 💼 Job Listing App
 
-🔗 **Live Demo:** [https://job-listing-app-dummy-data-azp6.vercel.app/](https://job-listing-app-dummy-data-azp6.vercel.app/)
+🔗 **Live Demo:** [https://job-listing-app-akil-backend-6i4a085im.vercel.app/](https://job-listing-app-akil-backend-6i4a085im.vercel.app/)
 
 A sleek, modern **Next.js** web application for showcasing job opportunities. It now uses **real data from the AKIL backend**, implements efficient data fetching with **React Query**, and features modern styling with **Tailwind CSS** and **shadcn/ui**, all following best practices for scalable and clean code architecture.
 
